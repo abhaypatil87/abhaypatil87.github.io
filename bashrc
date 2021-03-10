@@ -117,6 +117,14 @@ if ! shopt -oq posix; then
   fi
 fi
 
+function set-title() {
+  if [[ -z "$ORIG" ]]; then
+    ORIG=$PS1
+  fi
+  TITLE="\[\e]2;$*\a\]"
+  PS1=${ORIG}${TITLE}
+}
+
 # Paths
 #Original java has been installed at the location below
 #JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk-14.0.1.jdk/Contents/Home"
