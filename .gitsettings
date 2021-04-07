@@ -1,0 +1,5 @@
+#Set user name
+git config --global user.name "Abhay Patil"
+
+#Set email address
+git config --global user.email "abhaypatil87@gmail.com"
